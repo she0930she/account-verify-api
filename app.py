@@ -146,7 +146,7 @@ def count_failed_attempt():
 #create a test route
 @app.route('/testhealth', methods=['GET'])
 def test():
-  return make_response(jsonify({'message': 'test route'}), 200)
+  return make_response(jsonify({'message': 'test route'}, {"success": True}), 200)
 
 
 # create a user
@@ -211,7 +211,7 @@ def login_user():
 
         exist_user = User.query.filter_by(username=username).first()
         if not exist_user:
-            return make_response(jsonify({'reason': 'Invalid username'}, {'success': False}), 401)
+            return make_response(jsonify({'reason': 'no such username'}, {'success': False}), 401)
 
         # Check recent failed attempts
         one_minute_ago = datetime.utcnow() - timedelta(minutes=1)
