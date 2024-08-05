@@ -1,0 +1,32 @@
+version: "3.9"
+
+services:
+  flask_app:
+    platform: linux/amd64 #<-- comment this if you're not an M1 arm64 based chip
+    container_name: flask_app
+    image: flask_live_app:1.0.0
+    build: .
+    ports:
+      - "4000:4000"
+    environment:
+      - DB_URL=postgresql://postgres:postgres@flask_db:5432/postgres
+    depends_on:
+      # build those images first
+      - flask_db
+
+  flask_db:
+    platform: "linux/amd64" #<-- comment this if you're not on an M1 arm64 based chip
+    container_name: flask_db
+    image: postgres:12
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=postgres
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata: {}
+    
