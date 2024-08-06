@@ -1,13 +1,11 @@
 
-## This is an account management RESTful APIs in docker containers
+## This is an account management RESTful APIs App running in docker containers
 I used flask in python, SQLAlchemy(ORM) and Postgresql as a database.  
 
----
 
 ### Prerequisite
 - Make sure you have docker running in the background(or docker desktop running).  
 
----
 
 ## Steps to run the Docker container
 1. git clone 
@@ -21,20 +19,20 @@ cd account-verify-api
 3. If you are using Mac M1 chip, remember to have `platform: "linux/amd64"`
 in the docker-compose.yml, other OS users needs to test on their own whether
 need it or not
-4. run docker-compose file
+4. run docker-compose file using below command in the terminal
 ```commandline
 docker compose up
 ```
-5. You should see your containers are running (inside Docker Desktop *containers*), 
-inside container *account-verify-api* has 2 containers: *flask_db* and *flask_app*
+5. You should see your containers are running (inside Docker Desktop *containers*). 
+The container *account-verify-api* has 2 containers: *flask_db* and *flask_app*
 
 ---
 
-- Some Docker command
+- Some Docker commands
 ```commandline
 docker login
 
-** add a tag for the  image **
+** add a tag for the image **
 docker tag image_name:_version_ she0930she/repo_name:tag_name
 docker tag accountapi she0930she/accountVerifyAPI:v1.0
 
@@ -49,9 +47,9 @@ docekr compose up
 docker images
 
 ** example: **
-docker tag postgres:12 she0930she/accountapi:postgresqldb 
+docker tag postgres:12 she0930she/accountapi:postgresql_db 
 docker images
-docker push she0930she/accountapi:postgresqldb
+docker push she0930she/accountapi:postgresql_db
 docker tag flask_live_app:1.0.0 she0930she/accountapi:flask_app
 docker push she0930she/accountapi:flask_app
 ```
