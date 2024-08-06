@@ -29,7 +29,7 @@ The container *account-verify-api* has 2 containers: *flask_db* and *flask_app*
 
 ## Please read API Document for further endpoint tests
 
----
+
 
 - Some Docker commands
 ```commandline
