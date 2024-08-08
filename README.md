@@ -6,7 +6,9 @@
 
 I used flask in python, SQLAlchemy(ORM) and Postgresql as a database, and running the flask app and postgresql in Docker containers.  
 
-
+<img src="app-flow.drawio.png"
+     alt="Markdown data flow"
+     style="float: left; margin-right: 10px;" />
 
 
 ---
