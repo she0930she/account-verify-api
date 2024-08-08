@@ -1,7 +1,15 @@
 
 ## This is an account management RESTful APIs App running in docker containers
-I used flask in python, SQLAlchemy(ORM) and Postgresql as a database.  
+<img src="data-flow.drawio.png"
+     alt="Markdown data flow"
+     style="float: left; margin-right: 10px;" />
 
+I used flask in python, SQLAlchemy(ORM) and Postgresql as a database, and running the flask app and postgresql in Docker containers.  
+
+
+
+
+---
 
 ### Prerequisite
 - Make sure you have docker running in the background(or docker desktop running).  
