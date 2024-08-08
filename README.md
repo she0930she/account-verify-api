@@ -1,5 +1,5 @@
 
-## This is an account management RESTful APIs App running in docker containers
+## This is an Account Management RESTful APIs connected to PostgreSQL running in the Docker Stack
 <img src="data-flow.drawio.png"
      alt="Markdown data flow"
      style="float: left; margin-right: 10px;" />
